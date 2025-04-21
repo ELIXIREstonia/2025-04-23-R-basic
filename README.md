@@ -1,8 +1,8 @@
-# 2024-10-02-R-basic
+# 2025-04-23-R-basic
 
 ELIXIR-EE training course on R and Rstudio basic usage. Target to learners who have no or very little prior experience with R and Rstudio.
 
-The main document of the lecture is the [2024-10-02-R-basic.Rmd](2024-10-02-R-basic.Rmd) R markdown document. R markdown allows code (examples) and explanation / documentation to be in the same document in a nicely formatted, well structured manner.
+The main document of the lecture is the [R-basic.Rmd](R-basic.Rmd) R markdown document. R markdown allows code (examples) and explanation / documentation to be in the same document in a nicely formatted, well structured manner.
 
 Data files needed in the code are located in the `data` folder.
 
@@ -30,4 +30,4 @@ Learning outcomes for the training:
 
 ### Next step
 
-Take a look at our follow up course on how to create compelling visualisations using R and ggplot2: [https://github.com/ELIXIREstonia/2024-10-09-R-visualisation](https://github.com/ELIXIREstonia/2024-10-09-R-visualisation)
+Take a look at our follow up course on how to create compelling visualisations using R and ggplot2: [https://github.com/ELIXIREstonia/2025-04-24-R-visualisation](https://github.com/ELIXIREstonia/2025-04-24-R-visualisation)
