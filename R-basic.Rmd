@@ -106,6 +106,42 @@ Hint: Your function will have to take into account all the costs: venue, food, d
 
 ```
 
+## Variable Types in R
+
+R has several basic variable types that are essential for working with data:
+
+1. **Numeric**: Represents numbers, including integers and decimals.
+
+```{r}
+x <- 10      # Numeric (integer)
+y <- 3.14    # Numeric (decimal)
+```
+
+2. **Character**: Represents text or strings.
+
+```{r}
+name <- "Alice"  # Character
+```
+
+3. **Logical**: Represents `TRUE` or `FALSE` values, often used in conditional statements.
+
+```{r}
+is_valid <- TRUE  # Logical
+```
+
+4. **Factor**: Represents categorical data with a fixed set of levels.
+
+```{r}
+gender <- factor(c("Male", "Female", "Female", "Male"))
+```
+
+5. **Date/Time**: Represents dates and times, useful for time-series data.
+
+```{r}
+today <- as.Date("2025-04-22")  # Date
+now <- Sys.time()               # Date-Time
+```
+
 ### Data Structures in R
 
 R has several data structures for organizing and storing data. Understanding these data structures is essential for effective data manipulation and analysis.
@@ -147,6 +183,35 @@ print(l)
 ```
 
 Each data structure has its strengths and applications, and choosing the right one depends on the specific needs of your data manipulation and analysis tasks.
+
+### Subsetting Data Structures
+
+Subsetting allows you to extract specific elements, rows, or columns from data structures. Here are some examples:
+
+1. **Vectors**:
+   ```r
+   v <- c(10, 20, 30, 40, 50)
+   v[1]    # Extract the first element
+   v[2:4]  # Extract elements from the second to the fourth position
+   v[c(1, 5)]  # Extract the first and fifth elements
+   ```
+
+2. **Matrices**:
+   ```r
+   m <- matrix(1:9, nrow = 3, ncol = 3)
+   m[1, 3]  # Extract the element in the first row and third column
+   m[1, ]   # Extract the entire first row
+   m[, 2]   # Extract the entire second column
+   ```
+
+3. **Data Frames**:
+   ```r
+   df <- data.frame(name = c("Alice", "Bob", "Charlie"), age = c(25, 30, 35))
+   df[1, 2]  # Extract the element in the first row and second column
+   df[1, ]   # Extract the entire first row
+   df[, "age"]  # Extract the 'age' column
+   df$name   # Extract the 'name' column using the $ operator
+   ```
 
 ### **Task: Organizing Student Data**
 
@@ -365,7 +430,7 @@ Using the "Memory Test on Drugged Islanders Data" dataset, your task is to analy
 
     -   Compare the results. Does the primed emotion seem to have an effect on the memory scores?
 
-    Find more options from [data-wrangling-cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+    Find more options from [tidyR](https://rstudio.github.io/cheatsheets/tidyr.pdf) and [data-transformation](https://rstudio.github.io/cheatsheets/data-transformation.pdf) cheetsheets.
 
 ```{r}
 
