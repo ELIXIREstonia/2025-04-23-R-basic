@@ -110,32 +110,32 @@ Hint: Your function will have to take into account all the costs: venue, food, d
 
 R has several basic variable types that are essential for working with data:
 
-1. **Numeric**: Represents numbers, including integers and decimals.
+1.  **Numeric**: Represents numbers, including integers and decimals.
 
 ```{r}
 x <- 10      # Numeric (integer)
 y <- 3.14    # Numeric (decimal)
 ```
 
-2. **Character**: Represents text or strings.
+2.  **Character**: Represents text or strings.
 
 ```{r}
 name <- "Alice"  # Character
 ```
 
-3. **Logical**: Represents `TRUE` or `FALSE` values, often used in conditional statements.
+3.  **Logical**: Represents `TRUE` or `FALSE` values, often used in conditional statements.
 
 ```{r}
 is_valid <- TRUE  # Logical
 ```
 
-4. **Factor**: Represents categorical data with a fixed set of levels.
+4.  **Factor**: Represents categorical data with a fixed set of levels.
 
 ```{r}
 gender <- factor(c("Male", "Female", "Female", "Male"))
 ```
 
-5. **Date/Time**: Represents dates and times, useful for time-series data.
+5.  **Date/Time**: Represents dates and times, useful for time-series data.
 
 ```{r}
 today <- as.Date("2025-04-22")  # Date
@@ -188,30 +188,33 @@ Each data structure has its strengths and applications, and choosing the right o
 
 Subsetting allows you to extract specific elements, rows, or columns from data structures. Here are some examples:
 
-1. **Vectors**:
-   ```r
-   v <- c(10, 20, 30, 40, 50)
-   v[1]    # Extract the first element
-   v[2:4]  # Extract elements from the second to the fourth position
-   v[c(1, 5)]  # Extract the first and fifth elements
-   ```
+1.  **Vectors**:
 
-2. **Matrices**:
-   ```r
-   m <- matrix(1:9, nrow = 3, ncol = 3)
-   m[1, 3]  # Extract the element in the first row and third column
-   m[1, ]   # Extract the entire first row
-   m[, 2]   # Extract the entire second column
-   ```
+    ``` {r}
+    v <- c(10, 20, 30, 40, 50)
+    v[1]    # Extract the first element
+    v[2:4]  # Extract elements from the second to the fourth position
+    v[c(1, 5)]  # Extract the first and fifth elements
+    ```
 
-3. **Data Frames**:
-   ```r
-   df <- data.frame(name = c("Alice", "Bob", "Charlie"), age = c(25, 30, 35))
-   df[1, 2]  # Extract the element in the first row and second column
-   df[1, ]   # Extract the entire first row
-   df[, "age"]  # Extract the 'age' column
-   df$name   # Extract the 'name' column using the $ operator
-   ```
+2.  **Matrices**:
+
+    ``` {r}
+    m <- matrix(1:9, nrow = 3, ncol = 3)
+    m[1, 3]  # Extract the element in the first row and third column
+    m[1, ]   # Extract the entire first row
+    m[, 2]   # Extract the entire second column
+    ```
+
+3.  **Data Frames**:
+
+    ``` {r}
+    df <- data.frame(name = c("Alice", "Bob", "Charlie"), age = c(25, 30, 35))
+    df[1, 2]  # Extract the element in the first row and second column
+    df[1, ]   # Extract the entire first row
+    df[, "age"]  # Extract the 'age' column
+    df$name   # Extract the 'name' column using the $ operator
+    ```
 
 ### **Task: Organizing Student Data**
 
