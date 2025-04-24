@@ -143,8 +143,6 @@ party_cost <- function(n, fpp=15, dpp=5, rent=100, entertainment=50) {
 }
 
 party_cost(10)
-
-
 ```
 
 ## Variable Types in R
@@ -232,32 +230,32 @@ Subsetting allows you to extract specific elements, rows, or columns from data s
 
 1.  **Vectors**:
 
-    ```{r}
-    v <- c(10, 20, 30, 40, 50)
-    v[1]    # Extract the first element
-    v[2:4]  # Extract elements from the second to the fourth position
-    v[c(1, 5)]  # Extract the first and fifth elements
-    ```
+```{r}
+v <- c(10, 20, 30, 40, 50)
+v[1]    # Extract the first element
+v[2:4]  # Extract elements from the second to the fourth position
+v[c(1, 5)]  # Extract the first and fifth elements
+```
 
 2.  **Matrices**:
 
-    ```{r}
-    m <- matrix(1:9, nrow = 3, ncol = 3)
-    m
-    m[1:2, 3]  # Extract the element in the first row and third column
-    m[1, ]   # Extract the entire first row
-    m[, 2]   # Extract the entire second column
-    ```
+```{r}
+m <- matrix(1:9, nrow = 3, ncol = 3)
+m # print the entire matrix
+m[1:2, 3]  # Extract the element in the first row and third column
+m[1, ]   # Extract the entire first row
+m[, 2]   # Extract the entire second column
+```
 
 3.  **Data Frames**:
 
-    ```{r}
-    df <- data.frame(name = c("Alice", "Bob", "Charlie"), age = c(25, 30, 35))
-    df[1, 2]  # Extract the element in the first row and second column
-    df[1, ]   # Extract the entire first row
-    df[, "age"]  # Extract the 'age' column
-    df$name   # Extract the 'name' column using the $ operator
-    ```
+```{r}
+df <- data.frame(name = c("Alice", "Bob", "Charlie"), age = c(25, 30, 35))
+df[1, 2]  # Extract the element in the first row and second column
+df[1, ]   # Extract the entire first row
+df[, "age"]  # Extract the 'age' column
+df$name   # Extract the 'name' column using the $ operator
+```
 
 ### **Task: Organizing Student Data**
 
@@ -441,28 +439,12 @@ head(data_summary)
 In the above code, replace `YourCategory` and `YourVariable` with the appropriate column names from your dataset. This will give a high-level overview of the data, summarizing it by the specified category and calculating the mean of the specified variable. The use of pipes makes it easy to understand the sequence of transformations applied to the data.
 
 ```{r}
-
-
-new_test_data <- data %>% mutate(
-  HalfOfOtherVariable = YourOtherVariable / 2,
-  SumOfVariables = YourVariable + YourOtherVariable,
-  YourGroup = case_when(
-    YourCategory %in% c("A", "B") ~ "Group 1",
-    YourCategory %in% c("C", "D") ~ "Group 2",
-    TRUE ~ "Other"
-  ),
-  NewVariable = case_when(
-    YourVariable > 60 ~ YourVariable * 2,
-    YourVariable < 40 ~ YourVariable / 2,
-    TRUE ~ YourVariable
-  )
-)
-
 # New column using mutate and case_when statement
 # note that we are overwriting (updating) the original data
 new_data <- data %>%
   mutate(
     HalfOfOtherVariabel = YourOtherVariable / 2, # we can add another column based on existing columns
+    SumOfVariables = YourVariable + YourOtherVariable, # or we can use combination of other columns
     YourGroup = case_when(
       YourCategory %in% c("A", "B") ~ "Group 1", # combine A and B into Group 1
       YourCategory %in% c("C", "D") ~ "Group 2", # combine C and D into Group 2
